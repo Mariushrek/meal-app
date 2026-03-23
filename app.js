@@ -20,7 +20,7 @@ async function login() {
     const { error } = await supabaseClient.auth.signInWithOtp({
         email,
         options: {
-            emailRedirectTo: "https://twoj-login.github.io/twoj-repo/"
+            emailRedirectTo: "https://mariushrek.github.io/meal-app/"
         }
     });
 
