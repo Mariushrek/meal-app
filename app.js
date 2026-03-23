@@ -17,7 +17,12 @@ let currentUser = null;
 async function login() {
     const email = document.getElementById("login-email").value;
 
-    const { error } = await supabaseClient.auth.signInWithOtp({ email });
+    const { error } = await supabaseClient.auth.signInWithOtp({
+        email,
+        options: {
+            emailRedirectTo: "https://twoj-login.github.io/twoj-repo/"
+        }
+    });
 
     if (error) {
         alert("Login error: " + error.message);
@@ -25,6 +30,7 @@ async function login() {
         alert("Magic link sent! Check your email.");
     }
 }
+
 
 // =====================================
 // Logout
