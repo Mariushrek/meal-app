@@ -1,7 +1,7 @@
 {
   "name": "Meal App",
   "short_name": "Meals",
-  "start_url": "./",
+  "start_url": "/meal-app/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
